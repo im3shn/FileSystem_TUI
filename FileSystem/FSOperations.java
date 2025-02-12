@@ -1,10 +1,11 @@
 package FileSystem;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-class FSOperations{
+class FSOperations implements Serializable{
     
     protected static FS fileSystem(String name) {
         FS home = new FS(name);

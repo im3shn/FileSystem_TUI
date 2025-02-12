@@ -1,6 +1,8 @@
 package FileSystem;
 
-public class FileSystem {
+import java.io.Serializable;
+
+public class FileSystem implements Serializable{
     private FS node;
 
     public FileSystem(String name) {

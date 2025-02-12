@@ -1,8 +1,9 @@
 package FileSystem;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-class FS {
+class FS implements Serializable{
 
     protected FS root;
     protected String name;

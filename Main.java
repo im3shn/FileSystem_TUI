@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 import FileSystem.FileSystem;
+import FileSystem.FSDB;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class Main {
             System.out.println("WELCOME TO COMMAND LINE FILESYSTEM");
             System.out.println("Enter you username:");
             String username = sc.nextLine();
-            FileSystem fs = new FileSystem(username);
+            FileSystem fs = FSDB.getFSDBInstance().getUserInstance(username);
             fs.exec(username, args);
             System.out.println(fs);
 
@@ -64,6 +65,7 @@ public class Main {
             System.err.println(e);
         } finally {
             sc.close();
+            FSDB.getFSDBInstance().saveFSDB();
         }
         
     }
